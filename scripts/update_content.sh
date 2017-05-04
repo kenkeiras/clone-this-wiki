@@ -30,11 +30,13 @@ for f in `find . -type f`;do
     esac
 done
 
-if [ "$1" = "--pull" ];then
-    if [ ! -d "${CLONE_ROOT}" ];then
-        git clone --bare "${UPSTREAM_URL}" "${CLONE_ROOT}"
-    else
-        cd "${CLONE_ROOT}"
-        git fetch --all
-    fi
+if [ ! -d "${CLONE_ROOT}" ];then
+    git clone --bare "${UPSTREAM_URL}" "${CLONE_ROOT}"
+    cd "${CLONE_ROOT}"
+    git update-server-info
+
+elif [ "$1" = "--pull" ];then
+    cd "${CLONE_ROOT}"
+    git fetch --all
+    git update-server-info
 fi
