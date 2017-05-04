@@ -13,19 +13,19 @@ cd "${CONTENT_ROOT}"
 
 IFS="`printf \'\\\\n\'`"
 for f in `find . -type f`;do
-    format=""
-
-    case $f in
-        *.md) format="markdown" ;;
-        *.org) format="org" ;;
-        *)     continue ;;
-    esac
 
     fout=`echo "$f" | sed 's/\.[^.]*$//'`
 
-    (
-        cat "${TEMPLATES_ROOT}/header.html";
-        pandoc -f $format "$f";
-        cat "${TEMPLATES_ROOT}/footer.html"
-    ) > ../"$fout.html"
+    case $f in
+        *.md)
+            (
+                cat "${TEMPLATES_ROOT}/header.html";
+                markdown "$f";
+                cat "${TEMPLATES_ROOT}/footer.html"
+            ) > ../"$fout.html"
+            ;;
+        *)     continue ;;
+    esac
+
+
 done
