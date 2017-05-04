@@ -14,3 +14,15 @@ h1,h2,h3 {
 #footer {
     text-align: center;
 }
+
+code {
+    padding: 0.5ex;
+    background-color: #444;
+    color: #eee;
+    font-size: medium;
+}
+
+pre > code {
+    display: block;
+    line-height: 1.2em;
+}
