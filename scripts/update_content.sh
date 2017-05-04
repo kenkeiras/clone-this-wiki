@@ -18,7 +18,7 @@ for f in `find . -type f`;do
 
     fout=`echo "$f" | sed 's/\.[^.]*$//'`
 
-    case $f in
+    case "$f" in
         *.md)
             (
                 cat "${TEMPLATES_ROOT}/header.html";
@@ -30,9 +30,11 @@ for f in `find . -type f`;do
     esac
 done
 
-if [ ! -d "${CLONE_ROOT}" ];then
-    git clone --bare "${UPSTREAM_URL}" "${CLONE_ROOT}"
-else
-    cd "${CLONE_ROOT}"
-    git fetch --all
+if [ "$1" = "--pull" ];then
+    if [ ! -d "${CLONE_ROOT}" ];then
+        git clone --bare "${UPSTREAM_URL}" "${CLONE_ROOT}"
+    else
+        cd "${CLONE_ROOT}"
+        git fetch --all
+    fi
 fi
