@@ -1,0 +1,18 @@
+# Ignore everything on the root directory
+/* 
+
+# Except for this file
+!.gitignore
+# For the content/ directory
+!/content
+# For the templates/ directory
+!/templates
+# For the static/ directory
+!/static
+# And for the scripts/
+!/scripts
+
+# Also, always ignore temporary files
+*~
+*.bk
+*#*
