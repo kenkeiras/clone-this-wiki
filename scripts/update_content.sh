@@ -1,6 +1,7 @@
 #!/bin/sh
 
 IFS=''
+UPSTREAM_URL=https://code.codigoparallevar.com/kenkeiras/clone-this-wiki
 
 FILE_PATH="$PWD/$0"
 DOC_ROOT=$(dirname $(dirname "${FILE_PATH}"))
@@ -8,6 +9,7 @@ CONTENT_ROOT="${DOC_ROOT}/content"
 RESULT_ROOT="${DOC_ROOT}/result"
 TEMPLATES_ROOT="${DOC_ROOT}/templates"
 SCRIPTS_ROOT="${DOC_ROOT}/scripts"
+CLONE_ROOT="${DOC_ROOT}/clone-this-wiki.git"
 
 cd "${CONTENT_ROOT}"
 
@@ -26,6 +28,11 @@ for f in `find . -type f`;do
             ;;
         *)     continue ;;
     esac
-
-
 done
+
+if [ ! -d "${CLONE_ROOT}" ];then
+    git clone --bare "${UPSTREAM_URL}" "${CLONE_ROOT}"
+else
+    cd "${CLONE_ROOT}"
+    git fetch --all
+fi
