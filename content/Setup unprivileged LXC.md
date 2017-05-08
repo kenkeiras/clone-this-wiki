@@ -5,7 +5,7 @@ This shows how to allow a user `gitit` to create and run `lxc` containers withou
 *This should work for any modern ubuntu/debian out of the box, other distros may need some patch.*
 *Mostly taken from [Stéphane Graber's website](https://stgraber.org/2014/01/17/lxc-1-0-unprivileged-containers/)*
 
-## As root
+## <a name="as_root">As root</a>
 
 * Install LXC tools (for normal LXC) and uidmap (for unprivileged operation)
 
@@ -56,7 +56,7 @@ This shows how to allow a user `gitit` to create and run `lxc` containers withou
         LXC_DHCP_CONFILE=""
         LXC_DOMAIN=""
 
-## As the user creating the unprivileged 
+## <a name="as_user">As the user creating the unprivileged</a>
 (After `su gitit`)
 
 * Configure the lxc template: in `~/.config/lxc/default.conf` write:
@@ -71,10 +71,15 @@ This shows how to allow a user `gitit` to create and run `lxc` containers withou
 Now the user should be able to create a container without root privileges:
 
     lxc-create -t download -n gitit-container -- -d debian -r sid -a amd64
+    
+## <a name="misc">Misc</a>
 
-## Potential errors
 
-* `lxc-create: utils.c: mkdir_p: 253 Permission denied - failed to create directory '/run/user/0/lxc/'`
+### <a name="potential_errors">[Potential errors](#potential_errors)</a>
+
+#### Failed to create directory `/run/user/0/lxc/`
+
+    lxc-create: utils.c: mkdir_p: 253 Permission denied - failed to create directory '/run/user/0/lxc/'
 
 To solve this unset the variables starting with XDG, as the user:
 
@@ -86,13 +91,18 @@ To solve this unset the variables starting with XDG, as the user:
     gitit@codigoparallevar:~$ env|grep XDG
     gitit@codigoparallevar:~$
 
-* ```
-unshare: Operation not permitted
-read pipe: Permission denied
-lxc-create: lxccontainer.c: do_create_container_dir: 985 Failed to chown container dir
-```
+#### Unshare: operation not permited
+
+    unshare: Operation not permitted
+    read pipe: Permission denied
+    lxc-create: lxccontainer.c: do_create_container_dir: 985 Failed to chown container dir
 
 As root 
 
     echo 1 > /sys/fs/cgroup/cpuset/cgroup.clone_children
     echo 1 > /proc/sys/kernel/unprivileged_userns_clone
+
+# <a name="references">References</a>
+
+* [Stéphane Graber's LXC 1.0: Blog post series [0/10]](https://stgraber.org/2013/12/20/lxc-1-0-blog-post-series/)
+* [Bikulov tips for LXC](http://bikulov.org/blog/2014/10/09/tips-for-lxc/)
