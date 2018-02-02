@@ -1,6 +1,5 @@
 #!/bin/sh
 
-IFS=''
 UPSTREAM_URL=https://code.codigoparallevar.com/kenkeiras/clone-this-wiki
 
 FILE_PATH="$PWD/$0"
@@ -21,11 +20,13 @@ IFS="`printf \'\\\\n\'`"
 for f in `find . -type f`;do
 
     fout=`echo "${RESULT_ROOT}/$f" | sed 's/\.[^.]*$//'`
+    mkdir -p "`dirname $fout`"
+    relative_root=$(echo $(dirname "$f"|sed -r 's/\/([^.][^/]+)/\/../g')/ | sed 's/\//\\\//g')
 
     case "$f" in
         *.md)
             (
-                cat "${TEMPLATES_ROOT}/header.html";
+                sed -r "s/@ROOT/${relative_root}/g" "${TEMPLATES_ROOT}/header.html";
                 markdown "$f";
                 cat "${TEMPLATES_ROOT}/footer.html"
             ) > "$fout.html"
