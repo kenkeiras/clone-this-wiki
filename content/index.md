@@ -4,3 +4,7 @@ Some contents:
 
  - [Setup LXC to allow usage by unprivileged users](Setup unprivileged LXC.html)
  - [Dataset sources](Dataset sources.html)
+
+Recurring problems:
+
+ - [Internal container cannot reach internet](recurring/internal container cannot reach internet.html)
