@@ -21,7 +21,7 @@ for f in `find . -type f`;do
 
     fout=`echo "${RESULT_ROOT}/$f" | sed 's/\.[^.]*$//'`
     mkdir -p "`dirname $fout`"
-    relative_root=$(echo $(dirname "$f"|sed -r 's/\/([^.][^/]+)/\/../g')/ | sed 's/\//\\\//g')
+    relative_root=$(echo $(dirname "$f"|sed -r 's/\/([^.][^/]+)/\/../g') | sed 's/\//\\\//g')
 
     case "$f" in
         *.md)
