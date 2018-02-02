@@ -27,7 +27,9 @@ for f in `find . -type f`;do
         *.md)
             (
                 sed -r "s/@ROOT/${relative_root}/g" "${TEMPLATES_ROOT}/header.html";
-                markdown "$f";
+                cat "$f" \
+                    | sed -r 's/^(#+) *([^\[`<]+)$/\1 <a name="\2">[\2](#\2)<\/a>/'  \
+                    | markdown
                 cat "${TEMPLATES_ROOT}/footer.html"
             ) > "$fout.html"
             ;;

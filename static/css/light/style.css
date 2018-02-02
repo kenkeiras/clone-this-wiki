@@ -6,21 +6,17 @@ nav > h1 {
     display: inline;
 }
 
-nav > h1 a {
-    text-decoration: none;
-}
-
 nav a {
     color: #222;
 }
 
-a[name]:hover:after {
-    content: "*";
-}
-
-article h1, h2, h3 > a {
+article h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     text-decoration: none;
     color: inherit;
+}
+
+article h2 > a:hover:after, h3 > a:hover:after, h4 > a:hover:after, h5 > a:hover:after, h6 > a:hover:after {
+    content: "🔗";
 }
 
 article {

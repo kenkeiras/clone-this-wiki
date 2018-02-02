@@ -5,7 +5,7 @@ This shows how to allow a user `gitit` to create and run `lxc` containers withou
 *This should work for any modern ubuntu/debian out of the box, other distros may need some patch.*
 *Mostly taken from [Stéphane Graber's website](https://stgraber.org/2014/01/17/lxc-1-0-unprivileged-containers/)*
 
-## <a name="as_root">As root</a>
+## As root
 
 * Install LXC tools (for normal LXC) and uidmap (for unprivileged operation)
 
@@ -56,7 +56,7 @@ This shows how to allow a user `gitit` to create and run `lxc` containers withou
         LXC_DHCP_CONFILE=""
         LXC_DOMAIN=""
 
-## <a name="as_user">As the user creating the unprivileged</a>
+## As the user creating the unprivileged
 (After `su gitit`)
 
 * Configure the lxc template: in `~/.config/lxc/default.conf` write:
@@ -72,10 +72,10 @@ Now the user should be able to create a container without root privileges:
 
     lxc-create -t download -n gitit-container -- -d debian -r sid -a amd64
     
-## <a name="misc">Misc</a>
+## Misc
 
 
-### <a name="potential_errors">[Potential errors](#potential_errors)</a>
+### Potential errors
 
 #### Failed to create directory `/run/user/0/lxc/`
 
@@ -102,7 +102,7 @@ As root
     echo 1 > /sys/fs/cgroup/cpuset/cgroup.clone_children
     echo 1 > /proc/sys/kernel/unprivileged_userns_clone
 
-# <a name="references">References</a>
+# References
 
 * [Stéphane Graber's LXC 1.0: Blog post series [0/10]](https://stgraber.org/2013/12/20/lxc-1-0-blog-post-series/)
 * [Bikulov tips for LXC](http://bikulov.org/blog/2014/10/09/tips-for-lxc/)
