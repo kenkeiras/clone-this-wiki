@@ -4,6 +4,7 @@ Some contents:
 
  - [Setup LXC to allow usage by unprivileged users](Setup unprivileged LXC.html)
  - [Dataset sources](Dataset sources.html)
+ - [Route git SSH to containers while keeping normal users](route git ssh to containers.html)
 
 Recurring problems:
 
