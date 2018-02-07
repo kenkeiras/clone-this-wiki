@@ -9,3 +9,4 @@ Some contents:
 Recurring problems:
 
  - [Internal container cannot reach internet](recurring/internal container cannot reach internet.html)
+ - [Emacs creates `.#blah` files](recurring/emacs lockfiles.html)
