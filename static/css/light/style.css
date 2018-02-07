@@ -6,6 +6,10 @@ nav > h1 {
     display: inline;
 }
 
+nav > h1 > a {
+    text-decoration: none;
+}
+
 nav a {
     color: #222;
 }
