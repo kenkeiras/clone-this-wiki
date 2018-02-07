@@ -10,3 +10,7 @@ Recurring problems:
 
  - [Internal container cannot reach internet](recurring/internal container cannot reach internet.html)
  - [Emacs creates `.#blah` files](recurring/emacs lockfiles.html)
+
+Scripts:
+
+ - [Setup a chroot connected to the local X server](setup a X-linked chroot.html)
