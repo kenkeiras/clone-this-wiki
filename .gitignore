@@ -2,3 +2,6 @@
 *~
 *.bk
 *#*
+
+# Vuepress can render the content!... mostly
+.vuepress

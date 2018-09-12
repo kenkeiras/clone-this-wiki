@@ -11,12 +11,16 @@ nav > h1 > a {
 }
 
 nav a {
-    color: #222;
+    color: #2c3e50;
 }
 
 article h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     text-decoration: none;
     color: inherit;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
 }
 
 article h2 > a:hover:after, h3 > a:hover:after, h4 > a:hover:after, h5 > a:hover:after, h6 > a:hover:after {
