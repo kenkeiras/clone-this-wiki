@@ -6,10 +6,11 @@ Some contents:
  - [Dataset sources](Dataset sources.html)
  - [Route git SSH to containers while keeping normal users](route git ssh to containers.html)
 
-Recurring problems:
+Recurring themes:
 
  - [Internal container cannot reach internet](recurring/internal container cannot reach internet.html)
  - [Emacs creates `.#blah` files](recurring/emacs lockfiles.html)
+ - [Set elixir status codes](elixir/status-codes.html)
 
 Scripts:
 
