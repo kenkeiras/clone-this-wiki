@@ -1,4 +1,4 @@
-Personal wiki for unpolished thoughts, the home for findings that don't reach the [blog](https://codigoparallevar.com/blog/).
+Personal wiki for unpolished thoughts, home for findings that probably won't reach the [blog](https://codigoparallevar.com/blog/).
 
 Some contents:
 
