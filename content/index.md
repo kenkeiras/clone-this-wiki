@@ -12,6 +12,10 @@ Recurring themes:
  - [Emacs creates `.#blah` files](recurring/emacs lockfiles.html)
  - [Set elixir status codes](elixir/status-codes.html)
 
+Useful links:
+
+ - [Uncategorized](links/uncategorized.html)
+
 Scripts:
 
  - [Setup a chroot connected to the local X server](setup a X-linked chroot.html)
