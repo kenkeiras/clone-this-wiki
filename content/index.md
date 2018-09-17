@@ -2,13 +2,13 @@ Personal wiki for unpolished thoughts, home for findings that probably won't rea
 
 Some contents:
 
- - [Setup LXC to allow usage by unprivileged users](Setup unprivileged LXC.html)
+ - [Setup LXC to allow usage by unprivileged users](./containers/Setup unprivileged LXC.html)
  - [Dataset sources](Dataset sources.html)
  - [Route git SSH to containers while keeping normal users](route git ssh to containers.html)
 
 Recurring themes:
 
- - [Internal container cannot reach internet](recurring/internal container cannot reach internet.html)
+ - [Internal container cannot reach internet](./containers/internal container cannot reach internet.html)
  - [Emacs creates `.#blah` files](recurring/emacs lockfiles.html)
  - [Set elixir status codes](elixir/status-codes.html)
 
