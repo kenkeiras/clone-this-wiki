@@ -11,6 +11,7 @@ Recurring themes:
  - [Internal container cannot reach internet](./containers/internal container cannot reach internet.html)
  - [Emacs creates `.#blah` files](recurring/emacs lockfiles.html)
  - [Set elixir status codes](elixir/status-codes.html)
+ - [Recurring commands](commands/recurring.html)
 
 Useful links:
 
