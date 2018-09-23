@@ -1,6 +1,6 @@
 # Introduction
 
-This is a offline-first wiki mean for minimal dependencies, just download it and edit the files on the `content` folder. Downloading the files can be done using `git` by doing
+This is a offline-first wiki meant to have minimal dependencies. Just download it and edit the files on the `content` folder. Downloading the files can be done using `git` by doing
 
     git clone https://wiki.codigoparallevar.com/clone-this-wiki.git
 
