@@ -22,8 +22,7 @@ s/^[[:space:]]*$/<br\/>/;
 
 # bold
 s/\*\*\([^*]*\)\*\*/ <strong>\1<\/strong>/g;
-# underlined
-s/\__\([^_]*\)\__/ <u>\1<\/u>/g;
+s/\__\([^_]*\)\__/ <strong>\1<\/strong>/g;
 
 # italics
 s/\*\([^*]*\)\*/ <em>\1<\/em>/g;
