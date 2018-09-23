@@ -54,5 +54,6 @@ if [ ! -d "${CLONE_ROOT}" ];then
 elif [ "$1" = "--pull" ];then
     cd "${CLONE_ROOT}"
     git fetch --all
+    git fetch origin master:master
     git update-server-info
 fi
