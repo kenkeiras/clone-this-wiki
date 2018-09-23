@@ -16,7 +16,7 @@ This files should be browsable directly from the filesystem or hosted on a remot
 
 # License
 
-Any original content can be considered under [WTFPL](http://www.wtfpl.net/) licence (copied below), any non-original content belongs to its author:
+Any original content can be considered under [WTFPL](http://www.wtfpl.net/) license (copied below), any non-original content belongs to its author:
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
