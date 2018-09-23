@@ -14,7 +14,9 @@ RESULT_ROOT="${DOC_ROOT}/live-files"
 STATIC_RESULT_ROOT="${RESULT_ROOT}/static"
 CLONE_ROOT="${RESULT_ROOT}/clone-this-wiki.git"
 
-MARKDOWN=`which markdown || echo "$(dirname "${FILE_PATH}")/markdown/markdown.sh"`
+if [ -z "$MARKDOWN" ];then
+    MARKDOWN=`which markdown || echo "$(dirname "${FILE_PATH}")/markdown/markdown.sh"`
+fi
 
 cd "${CONTENT_ROOT}"
 
