@@ -8,3 +8,6 @@ s/<\/ul><ul>/\n/g;
 s/^/<p>/g;
 s/$/<\/p>/g;
 s/<br\/>/<\/p><p>/g;
+
+# Remove spaces at header end
+s/ *<\/h/<\/h/g;
