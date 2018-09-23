@@ -20,9 +20,14 @@ s/`\([^`]*\)`/<code>\1<\/code>/g;
 # Line jumps
 s/^[[:space:]]*$/<br\/>/;
 
-# bold and italics
+# bold
 s/\*\*\([^*]*\)\*\*/ <strong>\1<\/strong>/g;
+# underlined
+s/\__\([^_]*\)\__/ <u>\1<\/u>/g;
+
+# italics
 s/\*\([^*]*\)\*/ <em>\1<\/em>/g;
+s/\_\([^_]*\)\_/ <em>\1<\/em>/g;
 
 # List 
 s/^\* \(.*\)/<ul><li>\1<\/li><\/ul>/g;
