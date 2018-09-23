@@ -14,6 +14,8 @@ RESULT_ROOT="${DOC_ROOT}/live-files"
 STATIC_RESULT_ROOT="${RESULT_ROOT}/static"
 CLONE_ROOT="${RESULT_ROOT}/clone-this-wiki.git"
 
+MARKDOWN=`which markdown || echo "$(dirname "${FILE_PATH}")/markdown.sh"`
+
 cd "${CONTENT_ROOT}"
 
 IFS="`printf \'\\\\n\'`"
@@ -29,7 +31,7 @@ for f in `find . -type f`;do
                 sed -r "s/@ROOT/${relative_root}/g" "${TEMPLATES_ROOT}/header.html";
                 cat "$f" \
                     | sed -r 's/^(#+) *([^\[`<]+)$/\1 <a name="\2">[\2](#\2)<\/a>/'  \
-                    | markdown
+                    | "${MARKDOWN}"
                 cat "${TEMPLATES_ROOT}/footer.html"
             ) > "$fout.html"
             ;;
