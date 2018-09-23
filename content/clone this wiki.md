@@ -12,3 +12,21 @@ To convert the files into .html ones readable from a browser just run the `scrip
     sh scripts/update_content.sh
 
 This files should be browsable directly from the filesystem or hosted on a remote web server.
+
+# License
+
+Any original content can be considered under [WTFPL](http://www.wtfpl.net/) licence (copied below), any non-original content belongs to its author:
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                    Version 2, December 2004
+    &nbsp;
+    Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+    &nbsp;
+    Everyone is permitted to copy and distribute verbatim or modified
+    copies of this license document, and changing it is allowed as long
+    as the name is changed.
+    &nbsp;
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+    &nbsp;
+    0. You just DO WHAT THE FUCK YOU WANT TO.
