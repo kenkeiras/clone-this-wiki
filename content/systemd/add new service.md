@@ -1,4 +1,4 @@
-# How to add a new service to SystemD
+# How to add a new service to Systemd
 
 Say we have a new service `gotify-reader` that we want to run on systemd. The steps to do so are the following:
 
@@ -22,8 +22,8 @@ This gives the minimal information that systemd needs to create the service:
 The exec script can be as simple as calling another script with certain
 parameters, there's no special control needed for basic services.
 
-**2.** Reload SystemD files `systemctl daemon-reload`.
-This makes SystemD aware of the new configuration.
+**2.** Reload Systemd files `systemctl daemon-reload`.
+This makes Systemd aware of the new configuration.
 
 **Done!** Service can be now operated with `systemctl`.
 

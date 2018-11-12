@@ -5,7 +5,7 @@ Some contents:
  - [Setup LXC to allow usage by unprivileged users](./containers/Setup unprivileged LXC.html)
  - [Dataset sources](Dataset sources.html)
  - [Route git SSH to containers while keeping normal users](./route git ssh to containers.html)
- - [Add a new service to SystemD](./systemd/add new service.html)
+ - [Add a new service to Systemd](./systemd/add new service.html)
 
 Recurring themes:
 
