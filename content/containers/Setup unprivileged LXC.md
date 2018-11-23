@@ -90,6 +90,12 @@ To solve this unset the variables starting with XDG, as the user:
     gitit@codigoparallevar:~$ unset XDG_RUNTIME_DIR
     gitit@codigoparallevar:~$ env|grep XDG
     gitit@codigoparallevar:~$
+    
+#### Could not find writable mount point for cgroup hierarchy X while trying to create cgroup
+
+    lxc-start: cgroups/cgfs.c: lxc_cgroupfs_create: 901 Could not find writable mount point for cgroup hierarchy 1 while trying to create cgroup.
+
+Install `libpam-cgm`.
 
 #### Unshare: operation not permited
 

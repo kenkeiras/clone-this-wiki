@@ -1,0 +1,9 @@
+* On debian sid
+ * apt install rkt
+
+Paths:
+      --dir=/var/lib/rkt        rkt data directory
+      --local-config=/etc/rkt       local configuration directory
+      --system-config=/usr/lib/rkt  system configuration directory
+
+alias rkt="rkt --dir=$HOME/.rkt/data --local-config=$HOME/.rkt/config --system-config=$HOME/.rkt/sysconfig"
